@@ -19,30 +19,25 @@ import {Food} from "../../model/food";
 })
 export class CartPage implements OnInit, OnDestroy {
 
-  private refOrder: any;
+  private refOrder$: any;
   private orderFoods: orderFood[];
 
   constructor(public navCtrl: NavController,private itemOrder: ItemsOrderProvider) {
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad CartPage');
-  }
-
   openDetail(item: Food) {
-    //  console.log(item);
     this.navCtrl.push(DetailFoodPage, {item: item});
   }
 
   ngOnInit(): void {
-    this.refOrder = this.itemOrder.dataS
+    this.refOrder$ = this.itemOrder.dataS
       .subscribe((data: orderFood[]) => {
       this.orderFoods = data;
     });
   }
 
   ngOnDestroy(): void {
-    this.refOrder.unsubscribe();
+    this.refOrder$.unsubscribe();
   }
 
 }

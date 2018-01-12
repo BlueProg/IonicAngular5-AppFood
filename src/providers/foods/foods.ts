@@ -4,14 +4,10 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 
 
-import { catchError, pluck, map } from 'rxjs/operators';
-import 'rxjs/add/operator/map';
-import 'rxjs/add/operator/pluck';
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/filter';
+import { catchError, pluck } from 'rxjs/operators';
 import { of } from "rxjs/observable/of";
 
-import { ListFood, Food } from "../../model/food";
+import { ListFood } from "../../model/food";
 
 @Injectable()
 export class FoodsProvider {

@@ -17,26 +17,6 @@ export interface orderFood {
   item: Food;
 }
 
-/*
-
-Depuis la page de base
-  C* => Detail food => *TR
-    Recoit food en params.
-    Pas besoin d'historique
-
-  Il instancie:
-    C* _ button-order: *TR =>
-      _ obtient food de detail food
-      _ doit recuperer le count sur items-order
-      _ peut modifier la commande de items-order
-
-    C* _ total-order: *TR => doit calculer le total via items-order
-
-  C* => items-order
-    Possede l'historique de la commande.
-
- */
-
 @Injectable()
 export class ItemsOrderProvider {
 

@@ -4,6 +4,7 @@ import {ItemsOrderProvider, orderFood} from "../../providers/items-order/items-o
 import {Food} from "../../model/food";
 import "rxjs/add/operator/reduce";
 import "rxjs/add/operator/mergeMap";
+import "rxjs/add/operator/filter";
 
 /**
  * Generated class for the ButtonOrderComponent component.
@@ -17,7 +18,7 @@ import "rxjs/add/operator/mergeMap";
 })
 export class ButtonOrderComponent implements OnInit, OnDestroy {
 
-  refOrderFlux : any;
+  refOrderFlux$ : any;
   count: number = 0;
 
   @Input() foodItem: Food;
@@ -25,13 +26,11 @@ export class ButtonOrderComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
 
-    this.refOrderFlux = this.itemOrderProvider.dataS
+    this.refOrderFlux$ = this.itemOrderProvider.dataS
       .filter((data: orderFood[]) => Object.keys(data).length > 0)
       .flatMap(x => x)
       .filter((data: orderFood) => data.item.id == this.foodItem.id)
       .subscribe((data) => {
-        console.log("Subscribe:");
-        console.log(data);
         this.foodItem = data.item;
         this.count = data.count;
       });
@@ -55,6 +54,6 @@ export class ButtonOrderComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.refOrderFlux.unsubscribe();
+    this.refOrderFlux$.unsubscribe();
   }
 }

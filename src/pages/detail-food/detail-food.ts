@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavParams } from 'ionic-angular';
 import { Food } from "../../model/food";
 
 /**
@@ -18,14 +18,7 @@ export class DetailFoodPage {
 
   private item: Food;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
-   // console.log("instance aussi");
-   // console.log(navParams.get('item'));
+  constructor(public navParams: NavParams) {
     this.item = navParams.get('item');
   }
-
-  ionViewDidLoad() {
-    //console.log('ionViewDidLoad DetailFoodPage');
-  }
-
 }
