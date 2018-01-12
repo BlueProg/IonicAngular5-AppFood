@@ -1,0 +1,34 @@
+{
+  "categories": [
+    {
+      "id": 0,
+      "name": "Boissons",
+      "picture": "assets/imgs/drink.jpg",
+      "products": [
+        {"id": 0, "name": "Coca-Cola 50cl", "price": 4, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/can.png"},
+        {"id": 1, "name": "Fanta 50cl", "price": 3, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/can.png"},
+        {"id": 2, "name": "Fanta 50cl", "price": 3, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/can.png"}
+      ]
+    },
+    {
+      "id": 1,
+      "name": "Sandwich",
+      "picture": "assets/imgs/food.jpg",
+      "products": [
+        {"id": 3, "name": "Jambon beurre", "price": 6, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/sandwitch200.jpg"},
+        {"id": 4, "name": "Hot-Dog", "price": 7, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/sandwitch200.jpg"},
+        {"id": 5, "name": "Jambon beurre", "price": 6, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/sandwitch200.jpg"},
+        {"id": 6, "name": "Hot-Dog", "price": 7, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/sandwitch200.jpg"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "Dessert",
+      "picture": "assets/imgs/dessertpic.jpg",
+      "products": [
+        {"id": 7, "name": "Jambon beurre", "price": 6, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/drink.jpg"},
+        {"id": 8, "name": "Hot-Dog", "price": 7, "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam fermentum, mi sed commodo rutrum.", "picture": "assets/imgs/drink.jpg"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+<!-- Generated template for the ButtonOrderComponent component -->
+
+
+<div *ngIf="visual == 'base'" class="order-flex">
+  <button class="button-style margin-left" (click)="removeOne()">
+    <ion-icon name="remove"></ion-icon>
+  </button>
+  <div class="count-order">{{ count }}</div>
+  <button class="button-style margin-right" (click)="addOne()">
+    <ion-icon name=add></ion-icon>
+  </button>
+</div>
+
+<div *ngIf="visual == 'compressed'" class="order-flex-content">
+  <div class="count-order-little">{{ count }}</div>
+  <div class="order-flex-little">
+    <button class="button-flex-little" (click)="removeOne()">
+      <ion-icon name="remove"></ion-icon>
+    </button>
+    <button class="button-flex-little" (click)="addOne()">
+      <ion-icon name=add></ion-icon>
+    </button>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<!--
+  Generated template for the CartPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title class="center-title">Panier</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <div class="center-content" *ngIf="orderFoods.length == 0">
+    <h5 class="margin-top">Vous n'avez aucune commande en cours !</h5>
+    <img class="size-picture" src="assets/imgs/hatsune.jpg">
+  </div>
+
+  <div *ngFor="let itemFood of orderFoods; let last = last">
+    <div class="content-flex">
+      <button ion-item detail-none no-lines (click)="openDetail(itemFood.item)">
+        <ion-avatar item-start>
+          <img src="{{itemFood.item.picture}}">
+        </ion-avatar>
+        <h2>{{ itemFood.item.name }}</h2>
+        <h3>{{ itemFood.item.price }}€/ unitée</h3>
+      </button>
+      <div>
+        <button-order [visual]="'compressed'" [foodItem]="itemFood.item"></button-order>
+      </div>
+    </div>
+    <div [ngClass]="(last)?'marginLast':'separator'"></div>
+  </div>
+  <total-order class="fixedOrder"></total-order>
+</ion-content>

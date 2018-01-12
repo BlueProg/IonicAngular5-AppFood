@@ -1,0 +1,65 @@
+button-order {
+
+}
+
+.order-flex {
+  display: flex;
+  width: 180px;
+  margin: auto;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #488aff;
+  border-radius: 40px;
+}
+
+.count-order {
+  background-color: white;
+  padding: 3px 8px 3px 8px;
+  border-radius: 5px;
+  width: 60px;
+  height: 22px;
+  text-align: center;
+}
+
+.margin-left {
+  margin: 5px 5px 5px -2px;
+}
+
+.margin-right {
+  margin: 5px -2px 5px 5px;
+}
+
+.button-style {
+  width: 32px;
+  height: 32px;
+  background-color: white;
+  border-radius: 20px;
+}
+
+.button-flex-little {
+  flex-grow: 1;
+  margin: 1px;
+  background-color: #488aff;
+  color: white;
+  border-radius: 10px;
+}
+
+.count-order-little {
+  width: 80px;
+  height: 80px;
+  display: flex;
+  font-size: large;
+  justify-content: center;
+  align-items: center;
+}
+
+.order-flex-little {
+  display: flex;
+  width: 40px;
+  height: 80px;
+  flex-direction: column;
+}
+
+.order-flex-content {
+  display: flex;
+}
